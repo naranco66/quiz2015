@@ -8,12 +8,8 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Quiz' });
 });
 
-router.get('/author' , function (req, res ) {
-   res.render('author')
-});
-
-
-router.get('/quizes/question' , quizController.question);
-router.get('/quizes/answer' , quizController.answer);
+router.get('/quizes/question',  quizController.question);     // formulario sign un
+router.get('/quizes/answer',  quizController.answer);     // formulario sign un
+router.get('/author/author', quizController.author);
 
 module.exports = router;
